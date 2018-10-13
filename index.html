@@ -1,0 +1,29 @@
+<html>
+    <script>
+
+    function board (cell) {
+        var getNextPositions = [];
+        var letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+        var rowX = letters.indexOf(cell[0]);    // använder indexOf för att läsa av vad vi matat in och leta upp potentiell ledig plats för Knight
+        var colY = parseInt(cell[1]);
+
+        var xPositions = [
+            rowX + 2,
+            rowX - 2,
+            rowX + 1,
+            rowX - 1 
+        ].filter(function(cellPosition) {   //.filter funktionen används för att visa alla element som går igenom testet
+            return (cellPosition > 0 && cellPosition < 9);  //returnerar värden som är över 0 och under 9
+        })
+
+        var yPositions = [
+            colY + 2,
+            colY - 2,
+            colY + 1,
+            colY - 1
+        ].filter(function(cellPosition) {   //.filter funktionen används för att visa alla element som går igenom testet
+            return (cellPosition > 0 && cellPosition < 9);  //returnerar värden som är över 0 och under 9
+        })
+
+    </script>
+</html>
